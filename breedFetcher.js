@@ -1,9 +1,9 @@
 const request = require('request');
-const api = 'https://api.thecatapi.com/v1/breeds/search'
-const arg = process.argv.slice(2).toString()
+const api = 'https://api.thecatapi.com/v1/breeds/search';
+const arg = process.argv.slice(2).toString();
 
 // Search for a Breed by using part of it’s name as the ‘q’ query parameter
-let apiQuery = `${api}?q=${arg}`
+let apiQuery = `${api}?q=${arg}`;
 
 request(apiQuery, (error, response, body) => {
   // Edge case: Handle request failed
@@ -17,8 +17,8 @@ request(apiQuery, (error, response, body) => {
   
   // Output data to terminal
   const data = JSON.parse(body);
-  console.log(data[0].description)
+  console.log(data[0].description);
 });
 
-// Test 
+// Test
 // node breedFetcher.js Chartreux
