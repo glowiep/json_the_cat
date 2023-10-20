@@ -27,22 +27,3 @@ request(apiQuery, (error, response, body) => {
 
 // Test
 // node breedFetcher.js Chartreux
-
-
-/*
-request(apiQuery, (error, response, body) => {
-  // Edge case: Handle request failed
-  if (error) {
-    return `🚨 Error: ${error}`;
-  }
-  // If status code is not a 200 type
-  if (!(response.statusCode >= 200 || response.statusCode < 300)) {
-    console.log("Status Code: ", response.statusCode);
-  }
-  
-  // Output data to terminal
-  const data = JSON.parse(body);
-  console.log(data[0].description);
-  })
-});
-*/
